@@ -1,0 +1,8 @@
+{
+  "name": "Navi - Digital services navigator",
+  "description": "Nordic-designed interactive student services navigator",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

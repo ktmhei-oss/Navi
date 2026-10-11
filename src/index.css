@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-bg: #f8fafc;
+    --surface-card: #ffffff;
+    --surface-muted: #f1f5f9;
+    --border-color: #e2e8f0;
+    --text-main: #111827;
+    --text-muted: #595959;
+    --text-dim: #595959;
+    --brand-primary: #1b4332;
+    --brand-primary-text: #ffffff;
+    --badge-sage-bg: #e8f0ec;
+    --badge-sage-border: #c2d6cc;
+    --badge-sage-text: #1b4332;
+    --badge-periwinkle-bg: #eef2ff;
+    --badge-periwinkle-border: #c7d2fe;
+    --badge-periwinkle-text: #4f46e5;
+    --table-header-bg: #f8fafc;
+    --header-bg: #f8fafc;
+    --bottom-nav-bg: rgba(255, 255, 255, 0.95);
+    --input-bg: #ffffff;
+    --notch-color: #1e293b;
+    --border-card-width: 1px;
+  }
+
+  [data-theme="dark"] {
+    --app-bg: #0d1117;
+    --surface-card: #161b22;
+    --surface-muted: #21262d;
+    --border-color: #30363d;
+    --text-main: #f0f6fc;
+    --text-muted: #a8b5c6;
+    --text-dim: #8899ad;
+    --brand-primary: #238636;
+    --brand-primary-text: #ffffff;
+    --badge-sage-bg: rgba(46, 160, 67, 0.15);
+    --badge-sage-border: rgba(46, 160, 67, 0.4);
+    --badge-sage-text: #3fb950;
+    --badge-periwinkle-bg: rgba(88, 166, 255, 0.15);
+    --badge-periwinkle-border: rgba(88, 166, 255, 0.35);
+    --badge-periwinkle-text: #79c0ff;
+    --table-header-bg: #1c2128;
+    --header-bg: #0d1117;
+    --bottom-nav-bg: rgba(22, 27, 34, 0.95);
+    --input-bg: #161b22;
+    --notch-color: #f0f6fc;
+    --border-card-width: 1px;
+  }
+
+  [data-theme="contrast"] {
+    --app-bg: #000000;
+    --surface-card: #0a0a0a;
+    --surface-muted: #171717;
+    --border-color: #ffffff;
+    --text-main: #ffffff;
+    --text-muted: #e5e5e5;
+    --text-dim: #d4d4d4;
+    --brand-primary: #ffff00;
+    --brand-primary-text: #000000;
+    --badge-sage-bg: #003300;
+    --badge-sage-border: #00ff66;
+    --badge-sage-text: #00ff66;
+    --badge-periwinkle-bg: #001a4d;
+    --badge-periwinkle-border: #66b2ff;
+    --badge-periwinkle-text: #66b2ff;
+    --table-header-bg: #111111;
+    --header-bg: #000000;
+    --bottom-nav-bg: #000000;
+    --input-bg: #000000;
+    --notch-color: #ffffff;
+    --border-card-width: 2px;
+  }
+
+  body {
+    font-family: "Hanken Grotesk", "Public Sans", sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  display: none;
+}
+.custom-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Dynamic theme variables */
+.theme-app-bg { background-color: var(--app-bg); }
+.theme-surface { background-color: var(--surface-card); }
+.theme-surface-muted { background-color: var(--surface-muted); }
+.theme-border { border-color: var(--border-color); border-width: var(--border-card-width); }
+.theme-border-b { border-bottom-color: var(--border-color); border-bottom-width: var(--border-card-width); }
+.theme-border-t { border-top-color: var(--border-color); border-top-width: var(--border-card-width); }
+.theme-divide > :not([hidden]) ~ :not([hidden]) { border-color: var(--border-color); border-width: var(--border-card-width); }
+.theme-text { color: var(--text-main); }
+.theme-text-muted { color: var(--text-muted); }
+.theme-text-dim { color: var(--text-dim); }
+.theme-primary-bg { background-color: var(--brand-primary); }
+.theme-primary-text { color: var(--brand-primary-text); }
+.theme-badge-sage { background-color: var(--badge-sage-bg); border-color: var(--badge-sage-border); color: var(--badge-sage-text); }
+.theme-badge-periwinkle { background-color: var(--badge-periwinkle-bg); border-color: var(--badge-periwinkle-border); color: var(--badge-periwinkle-text); }
+.theme-table-header { background-color: var(--table-header-bg); }
+.theme-header { background-color: var(--header-bg); }
+.theme-nav-bg { background-color: var(--bottom-nav-bg); }
+.theme-input { background-color: var(--input-bg); }
+.theme-notch-text { color: var(--notch-color); }
+
